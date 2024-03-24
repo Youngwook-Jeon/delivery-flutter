@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
           ),
           const FoodsList(),
           Heading(
-            text: "Food closer to you",
+            text: "Fastest food closer to you",
             onTap: () {
               Get.to(() => const AllFastestFoods(),
                   transition: Transition.cupertino,
