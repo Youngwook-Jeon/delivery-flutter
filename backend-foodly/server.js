@@ -3,6 +3,7 @@ const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const categoryRoute = require("./routes/categoryRoute");
+const restaurantRoute = require("./routes/restaurantRoute");
 
 const port = process.env.PORT || 8000;
 
@@ -16,6 +17,7 @@ mongoose
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/categories", categoryRoute);
+app.use("/api/restaurants", restaurantRoute);
 
 app.listen(port, () =>
   console.log(`Backend for Foodly is running on port ${port}.`)
